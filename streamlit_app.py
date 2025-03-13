@@ -42,7 +42,7 @@ if download:
             label="Download Data as CSV",
             data=csv,
             file_name=f"{STOCKS[selected_stock]}_stock_data.csv",
-            mime="text/csv"
+            mime="text/csv")
 
         
 
