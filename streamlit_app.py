@@ -27,5 +27,22 @@ if st.button("Fetch Data"):
         ax.set(title=f"{selected_stock} Stock Prices", xlabel="Date", ylabel="Price (USD)")
         ax.legend()
         ax.grid()
+        st.pyplot(fig)        
+download = st.button("Download the data")
+if download:
+    df = yf.download(STOCKS[selected_stock], start=start_date, end=end_date)
 
-        st.pyplot(fig)
+    if df.empty:
+        st.warning("No data available for the selected period.")
+    else:
+        # Convert dataframe to CSV for download
+        csv = df.to_csv().encode('utf-8')
+        # Create a download button
+        st.download_button(
+            label="Download Data as CSV",
+            data=csv,
+            file_name=f"{STOCKS[selected_stock]}_stock_data.csv",
+            mime="text/csv"
+
+        
+
