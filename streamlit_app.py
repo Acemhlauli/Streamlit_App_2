@@ -43,19 +43,14 @@ if st.button("Fetch Data"):
         st.warning("No data available for the selected period.")
     else:
         fig, ax = plt.subplots(figsize=(10, 5))
-        ax.plot(df.index, df["Adj Close"], label="Adjusted Closing Price", color="blue")
+        ax.plot(df.index, df["Close"], label="Closing Price", color="blue")
+        ax.plot(df.index, df["Adj Close"], label="Adjusted Close Price", color="green", linestyle="dashed")
         ax.set(title=f"{selected_stock} Stock Prices", xlabel="Date", ylabel="Price (USD)")
         ax.legend()
         ax.grid()
         st.pyplot(fig)
-
-if st.button("Download Data"):
-    df = yf.download(STOCKS[selected_stock], start=start_date, end=end_date)
-    
-    if df.empty:
-        st.warning("No data available for the selected period.")
-    else:
-        # Convert dataframe to CSV for download
+        
+        # Store dataframe for download
         csv = df.to_csv().encode('utf-8')
         st.download_button(
             label="Download Data as CSV",
