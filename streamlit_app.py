@@ -38,7 +38,6 @@ end_date = st.date_input("End Date")
 
 if st.button("Fetch Data"):
     df = yf.download(STOCKS[selected_stock], start=start_date, end=end_date)
-    dividends = yf.Ticker(STOCKS[selected_stock]).dividends
     
     if df.empty:
         st.warning("No data available for the selected period.")
@@ -49,22 +48,13 @@ if st.button("Fetch Data"):
         ax.legend()
         ax.grid()
         st.pyplot(fig)
-        
-        if not dividends.empty:
-            st.write("## Dividend Data")
-            st.dataframe(dividends)
-        else:
-            st.write("No dividend data available.")
 
 if st.button("Download Data"):
     df = yf.download(STOCKS[selected_stock], start=start_date, end=end_date)
-    dividends = yf.Ticker(STOCKS[selected_stock]).dividends
     
     if df.empty:
         st.warning("No data available for the selected period.")
     else:
-        df["Dividends"] = dividends.reindex(df.index, fill_value=0)
-        
         # Convert dataframe to CSV for download
         csv = df.to_csv().encode('utf-8')
         st.download_button(
