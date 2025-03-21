@@ -6,26 +6,26 @@ import matplotlib.pyplot as plt
 STOCKS = {
     "Alphabet (GOOGL)": "GOOGL",
     "Nvidia (NVDA)": "NVDA",
-    "Microsoft (MSFT)": "MSFT"
-    "Nvidia": "NVDA"
-    'Bayerische Motoren Werke Aktiengesellschaft": "BMW.DE"
-    "London Stock Exchange Group plc": "LSEG.L"
-    "RIO Tinto": "RIO.AX"
-    "Sasol": "SOL.JO"
-    "Satrix 40 ETF": "STX40.JO"
-    "CLP Holdings Ltd": "0002.HK"
-    "GameStop Corp".: "GME"
-    "Alphabet Inc".: "GOOG"
-    "Tesla": "TSLA"
-    "Amazon.com Inc": "AMZN"
-    "Naspers Ltd.": "NPN.JO"
-    "Bitcoin": "BTC-USD"
-    "Anglo American Plc": "AGL.JO"
-    "Capitec Bank": "CPI.JO"
-    "Pik n Pay": "PIK.JO"
-    "Shoprite Holdings Ltd": "SHP.JO"
-    "Ethereum": "ETH-USD"
-    "BHP Group Limited": "BHP.AX"
+    "Microsoft (MSFT)": "MSFT",
+    "Nvidia": "NVDA",
+    "Bayerische Motoren Werke Aktiengesellschaft": "BMW.DE",
+    "London Stock Exchange Group plc": "LSEG.L",
+    "RIO Tinto": "RIO.AX",
+    "Sasol": "SOL.JO",
+    "Satrix 40 ETF": "STX40.JO",
+    "CLP Holdings Ltd": "0002.HK",
+    "GameStop Corp": "GME",
+    "Alphabet Inc": "GOOG",
+    "Tesla": "TSLA",
+    "Amazon.com Inc": "AMZN",
+    "Naspers Ltd.": "NPN.JO",
+    "Bitcoin": "BTC-USD",
+    "Anglo American Plc": "AGL.JO",
+    "Capitec Bank": "CPI.JO",
+    "Pik n Pay": "PIK.JO",
+    "Shoprite Holdings Ltd": "SHP.JO",
+    "Ethereum": "ETH-USD",
+    "BHP Group Limited": "BHP.AX",
     "Anglo American Platinum": "AMS.JO"
 }
 
